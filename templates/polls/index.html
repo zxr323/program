@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+{% if latest_question_list %}
+    {% for q in latest_question_list %}
+    <ul>
+        <li><a href = "/polls/{{ q.id }}/">{{ q.question_text }}</a></li>
+    </ul>
+    {% endfor %}
+{% else %}
+    <p> No polls are available.</p>
+{% endif %}
